@@ -1,0 +1,534 @@
+/* Remove margens e espaçamentos padrões do navegador */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Configurações gerais da página */
+body{
+    height: 100vh; /* ocupa toda a altura da tela */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ===================================================
+   CONTAINER PRINCIPAL
+   =================================================== */
+
+/* Divide a tela em duas partes:
+   menu lateral e conteúdo principal */
+.container{
+    display: flex;
+    min-height: 100vh;
+}
+
+/* ===================================================
+   MENU LATERAL
+   =================================================== */
+
+.sidebar{
+    width: 220px;
+
+    background: linear-gradient(
+        to right,
+        #7a7a7a 0%,
+        #9e9e9e 30%,
+        #d9d9d9 70%,
+        #ffffff 100%
+    );
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    min-height: 100%;
+}
+/* Espaçamento da logo */
+.logo{
+    padding: 40px 0;
+}
+
+/* Tamanho da imagem */
+.logo img{
+    width: 120px;
+}
+
+/* Container dos links */
+
+.menu{
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    /* centraliza os botões na sidebar */
+    align-items: center;
+
+    gap: 8px;
+}
+
+.menu a img{
+    width: 40px;
+    height: 40px;
+
+    object-fit: contain;
+}
+.menu a{
+    width: 190px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    gap: 10px;
+
+    padding: 1px 15px;
+
+    text-decoration: none;
+    color: #333;
+
+    background-color: transparent;
+
+    border-radius: 10px;
+}
+
+:root{
+    --verde-ativo: #005f1f;
+    --verde-hover: #1f8a3a;
+    border-radius: 10px;
+}
+/* Efeito ao passar o mouse */
+.menu a:hover{
+    background-color: var(--verde-hover);
+    color: white;
+    border-radius: 10px;
+}
+/* Link da página atual */
+.menu .ativo{
+    background-color: var(--verde-ativo);
+    color: white;
+    border-radius: 10px;
+}
+
+.menu a:not(.ativo):hover{
+    background-color: var(--verde-hover);
+    color: white;
+}
+
+.menu .ativo:hover{
+    background-color: var(--verde-ativo);
+    color: white;
+}
+/* ===================================================
+   CONTEÚDO PRINCIPAL
+   =================================================== */
+
+.conteudo{
+
+    /* ocupa todo espaço restante */
+    flex: 1;
+
+    display: flex;
+
+    /* organiza topo, banner e conteúdo verticalmente */
+    flex-direction: column;
+}
+
+.indicadores{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.bolinha{
+    width: 12px;
+    height: 12px;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.5);
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.bolinha.ativa{
+    width: 18px;
+    height: 18px;
+
+    background: white;
+}
+
+/* ===================================================
+   CARROSSEL
+   =================================================== */
+.carrossel{ 
+    width: 100%;
+    height: auto;
+
+    max-height: 700px;
+
+    object-fit: contain;
+
+    border-radius: 12px;
+
+    margin: 30px 0 0 30px;   /* sobe o carrossel */
+
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carrossel img{
+    width: 650px;
+    height: 360px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+}
+
+.seta{
+    position: absolute;
+
+    width: 50px;
+    height: 50px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(0,0,0,0.5);
+    color: white;
+
+    font-size: 24px;
+
+    cursor: pointer;
+}
+
+.esquerda{
+    left: 15px;
+}
+
+.direita{
+    right: 15px;
+}
+
+
+/* ===================================================
+   TOPO VERDE
+   =================================================== */
+
+.topo{
+
+    height: 90px;
+
+    background-color: #168228;
+
+    display: flex;
+
+    /* joga os itens para as extremidades */
+    justify-content: space-between;
+
+    /* centraliza verticalmente */
+    align-items: center;
+
+    padding: 0 20px;
+}
+
+/* Botão de pesquisa */
+.pesquisa{
+
+    border: none;
+
+    background: none;
+
+    font-size: 24px;
+
+    cursor: pointer;
+}
+.pesquisa img{
+    width: 40px;
+    height: 40px;
+
+    object-fit: contain;
+}
+
+/* ===================================================
+   BANNER DE BOAS-VINDAS
+   =================================================== */
+
+:root{
+    --verde-ifgnu: #157347;
+}
+
+.ifgnu{
+    color: var(--verde-ifgnu);
+}
+
+.banner{
+
+    background-color: #004d14;
+
+    color: white;
+
+    padding: 1px;
+
+    display: flex;
+
+    /* alinha os textos verticalmente */
+    align-items: center;
+
+    /* espaço entre título e texto */
+    gap: 10px;
+}
+
+.banner h1{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 30px;
+    letter-spacing: 2px;
+    font-weight: normal;
+}
+
+.banner p{
+    font-size: 14px;
+}
+
+/* ===================================================
+   ÁREA PRINCIPAL
+   =================================================== */
+
+.area-principal{
+
+    /* ocupa todo espaço restante abaixo do banner */
+    flex: 1;
+
+    background-color: #ffffff;
+}
+
+/* ===================================================
+   SOBRE O IFGNU
+   =================================================== */
+
+.sobre-ifgnu{
+    margin: 30px 20px;
+    max-width: 900px;
+}
+
+.texto-ifgnu h2{
+    color: #157347;
+    margin-bottom: 10px;
+}
+
+.texto-ifgnu p{
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* ===================================================
+   ESTATÍSTICAS
+   =================================================== */
+
+.estatisticas{
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    margin: 30px 20px;
+
+    flex-wrap: wrap;
+}
+
+.card-estatistica{
+    background-color: white;
+
+    padding: 20px;
+
+    min-width: 180px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+
+    text-align: center;
+}
+
+.card-estatistica h3{
+    color: #157347;
+    font-size: 30px;
+}
+
+.card-estatistica p{
+    color: #555;
+}
+
+/* ===================================================
+   COMO PARTICIPAR
+   =================================================== */
+
+.participar{
+    margin: 40px 20px;
+}
+
+.participar h2{
+    color: #157347;
+    margin-bottom: 20px;
+}
+
+.passos{
+    display: flex;
+    gap: 20px;
+
+    flex-wrap: wrap;
+}
+
+.passo{
+    background-color: white;
+
+    width: 250px;
+
+    padding: 20px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+
+    text-align: center;
+}
+
+.passo h3{
+    color: #157347;
+    font-size: 32px;
+
+    margin-bottom: 10px;
+}
+
+.passo p{
+    color: #444;
+}
+
+/* ===================================================
+   APRESENTAÇÃO
+   =================================================== */
+
+.apresentacao{
+    display: flex;
+
+    align-items: center;
+
+    gap: 40px;
+
+    margin: 0,2px;
+}
+
+.lado-esquerdo{
+    display: flex;
+    flex-direction: column;
+}
+
+.sobre-ifgnu{
+    max-width: 500px;
+    margin-top: 30px;
+}
+
+.sobre-ifgnu h2{
+    color: #157347;
+
+    margin-bottom: 20px;
+
+    font-size: 38px;
+}
+
+.sobre-ifgnu p{
+    font-size: 18px;
+
+    line-height: 1.8;
+
+    color: #333;
+
+    margin-bottom: 15px;
+}
+
+/* ==========================
+   RESPONSIVIDADE
+   ========================== */
+
+@media (max-width: 1200px){
+
+    .apresentacao{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .carrossel{
+        width: 80%;
+        margin: 20px auto;
+    }
+
+    .sobre-ifgnu{
+        max-width: 90%;
+        text-align: center;
+    }
+
+    .estatisticas{
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 768px){
+
+    .container{
+        flex-direction: column;
+    }
+
+    .sidebar{
+        width: 100%;
+        min-height: auto;
+    }
+
+    .menu{
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+
+    .menu a{
+        width: auto;
+        padding: 10px 15px;
+    }
+
+    .logo{
+        padding: 20px 0;
+    }
+
+    .carrossel{
+        width: 95%;
+    }
+
+    .banner{
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .banner h1{
+        font-size: 24px;
+    }
+
+    .estatisticas{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-estatistica{
+        width: 90%;
+        max-width: 300px;
+    }
+}

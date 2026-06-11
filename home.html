@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- Configurações básicas da página -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título exibido na aba do navegador -->
+    <title>IFgnu</title>
+    <!-- Fonte Bebas Neue -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+<!-- Seu arquivo CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Arquivo CSS externo -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+    <!-- Container principal que divide a tela em duas partes:
+         menu lateral + conteúdo principal -->
+    <div class="container">
+
+        <!-- Barra lateral -->
+        <aside class="sidebar">
+
+            <!-- Área da logo -->
+            <div class="logo">
+                <img src="imagens/ifgnu.png" alt="Logo do site">
+            </div>
+
+            <!-- Menu de navegação -->
+            <nav class="menu">
+                <a href="#" class="ativo">
+                    <img src="imagens/home.png" alt="Início">
+                     Início
+                </a>
+                <a href="#">
+                    <img src="imagens/computador.png" alt="Início"> 
+                    Projetos
+                </a>
+                <a href="#">
+                    <img src="imagens/comunidade.png" alt="Início"> 
+                    Comunidade
+                </a>
+                <a href="https://docs.google.com/forms/d/1huhx4T02bvUjm77QIbdGa1JGC4K5RsyP5pcvzDPJYSU/edit?usp=drivesdk"
+                target="_blank">
+                    <img src="imagens/contribuir.png" alt="Contribuir">
+                    Contribuir
+                </a>
+
+            </nav>
+
+        </aside>
+
+        <!-- Conteúdo principal -->
+        <main class="conteudo">
+
+            <!-- Barra verde superior -->
+            <header class="topo">
+
+                <!-- Div vazia apenas para ajudar no alinhamento -->
+                <div></div>
+
+                <!-- Botão de pesquisa -->
+                <button class="pesquisa">
+                    <img src="imagens/lupa.png" alt="Pesquisar">
+                </button>
+
+            </header>
+
+            <!-- Faixa de boas-vindas -->
+            <section class="banner">
+
+                <h1>BEM VINDO AO <span class="ifgnu">IFGNU!</span></h1>
+                <p>
+                    um espaço para ideias, <br>códigos e aprendizado.
+                </p>
+
+            </section>
+
+            <!-- Área onde o conteúdo do site será exibido -->
+
+            <section class="area-principal">
+
+            <div class="carrossel">
+
+                <button class="seta esquerda" onclick="anterior()">
+                    &#10094;
+                </button>
+
+                <img id="imagemCarrossel"
+                    src="imagens/carrossel/pc.jpg"
+                    alt="Carrossel">
+
+                <button class="seta direita" onclick="proxima()">
+                    &#10095;
+                </button>
+
+            </div>
+
+            <div class="indicadores">
+                <span class="bolinha ativa"></span>
+                <span class="bolinha"></span>
+            </div>
+
+        </section>
+
+        </main>
+
+    </div>
+
+    <script>
+
+    const imagens = [
+        "imagens/carrossel/pc.jpg",
+        "imagens/carrossel/cod.webp"
+    ];
+
+    let indice = 0;
+
+    const imagem = document.getElementById("imagemCarrossel");
+    const bolinhas = document.querySelectorAll(".bolinha");
+
+    function atualizar(){
+
+        imagem.src = imagens[indice];
+
+        bolinhas.forEach(b => {
+            b.classList.remove("ativa");
+        });
+
+        bolinhas[indice].classList.add("ativa");
+    }
+
+    function proxima(){
+
+        indice++;
+
+        if(indice >= imagens.length){
+            indice = 0;
+        }
+
+        atualizar();
+    }
+
+    function anterior(){
+
+        indice--;
+
+        if(indice < 0){
+            indice = imagens.length - 1;
+        }
+
+        atualizar();
+    }
+
+    function irPara(posicao){
+
+        indice = posicao;
+
+        atualizar();
+    }
+
+    </script>
+
+
+</body>
+</html>
