@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IFgnu - Comunidade</title>
+    <!-- Fonte Bebas Neue -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <!-- Arquivo CSS externo -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Container principal que divide a tela em duas partes: menu lateral + conteúdo principal -->
+    <div class="container">
+
+        <!-- Barra lateral -->
+        <aside class="sidebar">
+            <!-- Área da logo -->
+            <div class="logo">
+                <img src="imagens/ifgnu.png" alt="Logo do site">
+            </div>
+
+            <!-- Menu de navegação -->
+            <nav class="menu">
+                <a href="index.html">
+                    <img src="imagens/home.png" alt="Início">
+                     Início
+                </a>
+                <a href="projetos.html">
+                    <img src="imagens/computador.png" alt="Projetos"> 
+                    Projetos
+                </a>
+                <a href="comunidade.html" class="ativo">
+                    <img src="imagens/comunidade.png" alt="Comunidade"> 
+                    Comunidade
+                </a>
+                <a href="https://docs.google.com/forms/d/1huhx4T02bvUjm77QIbdGa1JGC4K5RsyP5pcvzDPJYSU/edit?usp=drivesdk"
+                target="_blank">
+                    <img src="imagens/contribuir.png" alt="Contribuir">
+                    Contribuir
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Conteúdo principal -->
+        <main class="conteudo">
+
+            <!-- Barra verde superior -->
+            <header class="topo">
+                <div></div>
+                <button class="pesquisa">
+                    <img src="imagens/lupa.png" alt="Pesquisar">
+                </button>
+            </header>
+
+            <!-- Faixa de boas-vindas -->
+            <section class="banner">
+                <h1>Faça Parte do Ecossistema <span class="ifgnu">IFGNU!</span></h1>
+                <p>
+                    A comunidade IFgnu é aberta para todos que desejam compartilhar conhecimento, tirar <br>dúvidas e participar ativamente do desenvolvimento de projetos tecnológicos e educacionais.
+                </p>
+            </section>
+
+            <!-- Seção com a grade de cards dos membros -->
+            <section class="grid-membros">
+
+                <!-- Card 1: Darlon Antônio de Oliveira -->
+                <div class="card-membro" onclick="abrirDetalhes('Darlon Antônio de Oliveira', 'Servidor Público / Gerente de TIC', 'Inativo (2010-2015)', 'Redes e Infraestrutura, Governança de TIC, Segurança da Informação', 'Possuo curso Técnico em Informática pelo Instituto Federal do Sudeste de Minas Gerais - Campus Rio Pomba e bacharelado em Ciência da Computação do mesmo campus. Atualmente sou pós-graduado em Administração e Segurança em Sistemas Computacionais na Faculdade Estácio de Sá de Juiz de Fora. Atuo como Técnico de Tecnologia da Informação no IF SUDESTE MG campus Rio Pomba, com Função de Gerente de Tecnologia da Informação.', 'darlonantoniooliveira@gmail.com', 'XXX', 'https://github.com/darlonoliveira', 'http://lattes.cnpq.br/2598036123895210', 'https://www.linkedin.com/in/darlon-oliveira-30257011a')">
+                    <img src="imagens/perfil/darlon.jpeg" alt="Foto Darlon" class="foto-perfil">
+                    <div class="info-card">
+                        <h3>Darlon Antônio</h3>
+                        <p>Ex-aluno Universitário</p>
+                        <span class="status inativo">inativo</span>
+                        <span class="cargo">2010-2015</span>
+                    </div>
+                </div>
+
+                <!-- Card 2: Rafael Arlindo Dias -->
+                <div class="card-membro" onclick="abrirDetalhes('Rafael Arlindo Dias', 'Técnico em TI na UFV', 'Inativo (2012-2017)', 'Desenvolvimento Web, Mobile, Engenharia de Software', 'Rafael Arlindo Dias é graduado em Ciência da Computação pelo IF Sudeste MG e especialista em Desenvolvimento Web e Mobile pelo IF Sudeste MG, além de especialista em Engenharia e Modelagem de Software UNIVIÇOSA. Desde 2023, é servidor público da Universidade Federal de Viçosa (UFV), atuando no desenvolvimento, manutenção e evolução de sistemas institucionais.', 'rafaelarlindodias@gmail.com', '(31) 99512-4528', 'https://github.com/rafaelarlindodias', 'http://lattes.cnpq.br/0026766238277956', 'https://br.linkedin.com/in/rafaelarlindodias')">
+                    <img src="imagens/perfil/rafael.png" alt="Foto Rafael" class="foto-perfil">
+                    <div class="info-card">
+                        <h3>Rafael Arlindo</h3>
+                        <p>Ex-aluno Universitário</p>
+                        <span class="status inativo">inativo</span>
+                        <span class="cargo">2012-2017</span>
+                    </div>
+                </div>
+
+                <!-- Card 3: Jairo Marotta Neto -->
+                <div class="card-membro" onclick="abrirDetalhes('Jairo Marotta Neto', 'Programador de Sistemas da Informação', 'Inativo (2011-2016)', 'Desenvolvimento de Software, Sistemas ERP', 'Jairo Marotta Neto é um profissional da área de tecnologia com experiência em desenvolvimento de software. Sua formação foi construída no IF Sudeste MG – Câmpus Rio Pomba, onde concluiu o curso técnico em Informática (2009) e se graduou como Bacharel em Ciência da Computação (2013). Atualmente, aplica toda essa bagagem como Programador de Sistemas da Informação na Tek-System Informática Ltda (Ubá-MG).', 'jairomarotta@gmail.com', '(32)98419-6190', 'https://github.com/jairomarotta', 'XXX', 'XXX')">
+                    <img src="imagens/perfil/jairo.jpg" alt="Foto Jairo" class="foto-perfil">
+                    <div class="info-card">
+                        <h3>Jairo Marotta</h3>
+                        <p>Ex-aluno do Técnico</p>
+                        <span class="status inativo">inativo</span>
+                        <span class="cargo">2011-2016</span>
+                    </div>
+                </div>
+
+                <!-- Card 4: Ângelo Batista Neves Júnior -->
+                <div class="card-membro" onclick="abrirDetalhes('Ângelo Batista Neves Júnior', 'Analista de Sistemas / Doutorando', 'Inativo (2013-2018)', 'Banco de Dados, Mineração de Dados', 'Graduou-se em Ciência da Computação no Instituto Federal de Educação Ciência e Tecnologia do Sudeste Minas Gerais - Campus Rio Pomba. Possui mestrado em Engenharia de Sistemas e Informação na Universidade Federal Fluminense e doutorado em Informática na área de Banco de Dados na Pontifícia Universidade Católica do Rio de Janeiro. Atualmente, trabalha no Instituto Tecgraf/PUC-Rio.', 'nevessangelo@gmail.com', 'XXX', 'XXX', 'http://lattes.cnpq.br/9428885231272830', 'XXX')">
+                    <img src="imagens/perfil/none.jpg" alt="Foto Ângelo" class="foto-perfil">
+                    <div class="info-card">
+                        <h3>Ângelo Batista</h3>
+                        <p>Ex-aluno Universitário</p>
+                        <span class="status inativo">inativo</span>
+                        <span class="cargo">2013-2018</span>
+                    </div>
+                </div>
+
+                <!-- Card 5: Bruno Luan de Sousa -->
+                <div class="card-membro" onclick="abrirDetalhes('Bruno Luan de Sousa', 'Engenheiro de Software / Doutor', 'Inativo (2014-2019)', 'Arquitetura de Software, Full Stack, Modelagem Matemática', 'Doutor em Ciência da Computação e Engenheiro de Software especializado no desenvolvimento de sistemas de alta complexidade. Atuo na interseção entre pesquisa científica e engenharia de software, projetando soluções escaláveis para automação de processos, BPM/ECM, simulação computacional e produtos digitais.', 'bruno.luan.sousa@gmail.com', 'XXX', 'https://github.com/BrunoLSousa', 'XXX', 'https://www.linkedin.com/in/bruno-sousa-65a410aa')">
+                    <img src="imagens/perfil/bruno.jpg" alt="Foto Bruno" class="foto-perfil">
+                    <div class="info-card">
+                        <h3>Bruno Luan</h3>
+                        <p>Ex-aluno Universitário</p>
+                        <span class="status inativo">inativo</span>
+                        <span class="cargo">2014-2019</span>
+                    </div>
+                </div>
+
+                <!-- Card 6: Kelly de Paiva Soares -->
+                <div class="card-membro" onclick="abrirDetalhes('Kelly de Paiva Soares', 'Programadora Sênior', 'Inativo (10/2012 - 07/2016)', 'Desenvolvimento de Software, Desenvolvimento Web e Integração de Sistemas', 'Participei do IFGnu entre 2012 e 2016, durante minha graduação em Ciência da Computação. Guardo com muito carinho essa fase da minha vida, que contribuiu não apenas para minha formação técnica, mas também para a construção de amizades e para o contato com pessoas que compartilhavam o interesse por tecnologia e software livre. Desde então, segui carreira na área de desenvolvimento e atualmente atuo como Programadora Sênior. Continuo acreditando na importância da troca de conhecimento, do aprendizado constante e da curiosidade que nos motiva a evoluir todos os dias.', 'kellysoares2013@gmail.com', 'XXX', 'https://github.com/KellySoares', 'XXX', 'https://www.linkedin.com/in/kellyps1730')">
+                    <img src="imagens/perfil/kelly.jpg" alt="Foto Kelly" class="foto-perfil">
+                    <div class="info-card">
+                        <h3>Kelly de Paiva</h3>
+                        <p>Ex-aluna Universitária</p>
+                        <span class="status inativo">inativo</span>
+                        <span class="cargo">2012-2016</span>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- Janela Modal (Pop-up de Detalhes que abre ao clicar no card) -->
+            <div id="modalDetalhes" class="modal" style="display: none;">
+                <div class="modal-conteudo">
+                    <span class="botao-fechar" onclick="fecharDetalhes()">&times;</span>
+                    
+                    <div class="modal-cabecalho">
+                        <h2 id="modalNome">Nome da Pessoa</h2>
+                        <span id="modalStatusBadge" class="badge-inativo">Inativo</span>
+                    </div>
+
+                    <p><strong>Habilidades / Área de Atuação:</strong> <span id="modalHabilidades">-</span></p>
+                    <p><strong>Profissão:</strong> <span id="modalProfissao">-</span></p>
+                    <p><strong>Biografia:</strong> <span id="modalBio">-</span></p>
+
+                    <div class="modal-rodape">
+                        <span id="modalEmail" class="contato-tag">email@exemplo.com</span>
+                        <span id="modalTelefone" class="contato-tag">-</span>
+                        <a id="modalGithub" href="#" target="_blank" class="contato-tag">GitHub</a>
+                        <a id="modalLattes" href="#" target="_blank" class="contato-tag">Lattes</a>
+                        <a id="modalLinkedin" href="#" target="_blank" class="contato-tag">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+
+            <section class="comunidade-content">
+                <div class="card-canal">
+                    <h3>🤝 Contribua</h3>
+                    <p>Tem interesse em somar forças? Veja como você pode colaborar com código, documentação ou ideias.</p>
+                    <a href="https://docs.google.com/forms/d/1huhx4T02bvUjm77QIbdGa1JGC4K5RsyP5pcvzDPJYSU/edit?usp=drivesdk"
+                    target="_blank">Saiba como ajudar</a>
+                </div>
+            </section>
+
+        </main>
+
+    </div>
+
+    <script>
+        function abrirDetalhes(nome, profissao, status, habilidades, bio, email, telefone, github, lattes, linkedin) {
+            document.getElementById('modalNome').innerText = nome;
+            document.getElementById('modalProfissao').innerText = profissao;
+            document.getElementById('modalStatusBadge').innerText = status;
+            document.getElementById('modalHabilidades').innerText = habilidades;
+            document.getElementById('modalBio').innerText = bio;
+            document.getElementById('modalEmail').innerText = email;
+            document.getElementById('modalTelefone').innerText = telefone;
+            
+            // Lógica para tratar os links que contêm 'XXX' para não quebrarem a página
+            const linkGithub = document.getElementById('modalGithub');
+            if (github === 'XXX') {
+                linkGithub.href = '#';
+                linkGithub.style.pointerEvents = 'none';
+                linkGithub.style.opacity = '0.5';
+            } else {
+                linkGithub.href = github;
+                linkGithub.style.pointerEvents = 'auto';
+                linkGithub.style.opacity = '1';
+            }
+
+            const linkLattes = document.getElementById('modalLattes');
+            if (lattes === 'XXX') {
+                linkLattes.href = '#';
+                linkLattes.style.pointerEvents = 'none';
+                linkLattes.style.opacity = '0.5';
+            } else {
+                linkLattes.href = lattes;
+                linkLattes.style.pointerEvents = 'auto';
+                linkLattes.style.opacity = '1';
+            }
+
+            const linkLinkedin = document.getElementById('modalLinkedin');
+            if (linkedin === 'XXX') {
+                linkLinkedin.href = '#';
+                linkLinkedin.style.pointerEvents = 'none';
+                linkLinkedin.style.opacity = '0.5';
+            } else {
+                linkLinkedin.href = linkedin;
+                linkLinkedin.style.pointerEvents = 'auto';
+                linkLinkedin.style.opacity = '1';
+            }
+
+            document.getElementById('modalDetalhes').style.display = 'flex';
+        }
+
+        function fecharDetalhes() {
+            document.getElementById('modalDetalhes').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IFgnu - Página inical</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .apresentacao {
+            display: flex;
+            align-items: flex-start;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        .lado-esquerdo {
+            flex: 1;
+            min-width: 300px;
+        }
+        .sobre-ifgnu {
+            flex: 1;
+            min-width: 300px;
+        }
+        .sobre-ifgnu2 {
+            flex: 1;
+            min-width: 300px;
+        }
+        .carrossel {
+            width: 100%;
+            position: relative;
+        }
+        .carrossel img {
+            width: 100%;
+            height: auto;
+            max-height: 310px; 
+            display: block;
+            border-radius: 8px;
+        }
+        .bloco-texto-completo {
+            margin-top: 25px;
+        }
+        .secao-dupla {
+            display: flex;
+            align-items: flex-start;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .coluna-tempo, .coluna-fazendo {
+            flex: 1;
+            min-width: 300px;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- Barra lateral -->
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="imagens/ifgnu.png" alt="Logo do site">
+            </div>
+            <nav class="menu">
+                <a href="#" class="ativo">
+                    <img src="imagens/home.png" alt="Início"> Início
+                </a>
+                <a href="projetos.html">
+                    <img src="imagens/computador.png" alt="Projetos"> Projetos
+                </a>
+                <a href="comunidade.html">
+                    <img src="imagens/comunidade.png" alt="Comunidade"> Comunidade
+                </a>
+                <a href="https://docs.google.com/forms/d/1huhx4T02bvUjm77QIbdGa1JGC4K5RsyP5pcvzDPJYSU/edit?usp=drivesdk" target="_blank">
+                    <img src="imagens/contribuir.png" alt="Contribuir"> Contribuir
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Conteúdo principal -->
+        <main class="conteudo">
+
+            <header class="topo">
+                <div></div>
+                <button class="pesquisa">
+                    <img src="imagens/lupa.png" alt="Pesquisar">
+                </button>
+            </header>
+
+            <section class="banner">
+                <h1>BEM VINDO AO <span class="ifgnu">IFGNU!</span></h1>
+                <p>Grupo de Estudos e Desenvolvimento de Software Livre <br>do IF Sudeste MG - Câmpus Rio Pomba.</p>
+            </section>
+
+            <section class="area-principal">
+                <div class="apresentacao">
+                    
+                    <!-- Coluna Esquerda: Carrossel -->
+                    <div class="lado-esquerdo">
+                        <div class="carrossel">
+                            <button class="seta esquerda" onclick="anterior()">&#10094;</button>
+                            <img id="imagemCarrossel" src="imagens/carrossel/ifgu.png" alt="Carrossel">
+                            <button class="seta direita" onclick="proxima()">&#10095;</button>
+                        </div>
+                        <div class="indicadores" style="margin-top: 10px; text-align: center;">
+                            <span class="bolinha ativa"></span>
+                            <span class="bolinha"></span>
+                            <span class="bolinha"></span>
+                        </div>
+                    </div>
+
+                    <!-- Coluna Direita: Primeira parte do texto ao lado da foto -->
+                    <div class="sobre-ifgnu">
+                        <h2>O que é o IFGNU?</h2>
+                        <p>
+                            O Grupo de Estudos e Pesquisa IFGNU foi criado em <strong>18 de maio de 2010</strong> pelos professores Gustavo Henrique da Rocha Reis e Wellington Moreira de Oliveira, membros efetivos do Departamento Acadêmico de Ciência da Computação do IF Sudeste MG – Câmpus Rio Pomba.
+                        </p>
+                        <p>
+                            O grupo surgiu com o objetivo de atuar nos três pilares da educação: <strong>Ensino, Extensão e Pesquisa</strong>.
+                        </p>
+                    </div>
+
+                </div>
+                <div class="sobre-ifgnu2">
+                    <p>
+                        Inicialmente formado por apenas quatro alunos, o IFGNU chegou a reunir até 30 integrantes ativos, atuando em diferentes áreas da tecnologia, como testes e reparos de equipamentos, desenvolvimento de sistemas web, pesquisas científicas e web design.
+                    </p>
+                    <p style="margin-top: 30px;">
+                        O IFGNU tem como objetivo aplicar o conhecimento tecnológico e científico na realidade atual, proporcionando aos alunos experiências de trabalho em equipe e despertando o interesse pela pesquisa científica.
+                    </p>
+                </div>
+            </section>
+
+
+            <section class="area-principal" style="margin-top: 20px;">
+                <div class="secao-dupla">
+                    
+                    <!-- Linha do Tempo -->
+                    <div class="coluna-tempo">
+                        <h2>Linha do Tempo</h2>
+                        <div style="margin-top: 15px; border-left: 3px solid #2e7d32; padding-left: 20px;">
+                            <div style="margin-bottom: 20px;">
+                                <h3 style="color: #2e7d32;">2010 - Criação do IFGNU</h3>
+                                <p>O IFGNU foi criado em 18 de maio de 2010 pelos professores Gustavo Henrique da Rocha Reis e Wellington Moreira de Oliveira.</p>
+                            </div>
+                            <div style="margin-bottom: 20px;">
+                                <h3 style="color: #2e7d32;">2011 - Novas colaborações</h3>
+                                <p>Em 2011, o grupo contou com a colaboração dos professores Gustavo Henrique da Rocha Reis e Frederico de Miranda Coelho.</p>
+                            </div>
+                            <div style="margin-bottom: 20px;">
+                                <h3 style="color: #2e7d32;">2012 - Expansão</h3>
+                                <p>Em 2012, o professor Daves Márcio Silva Martins passou também a fazer parte do grupo de estudos.</p>
+                            </div>
+                        </div>
+                        <p style="margin-top: 15px;"><em>Expansão do grupo:</em> O IFGNU surgiu inicialmente com quatro alunos e chegou a contar com até 30 integrantes ativos em diferentes áreas da tecnologia.</p>
+                        
+                        <!-- Aprender fazendo colocado logo abaixo da Linha do Tempo -->
+                        <div style="margin-top: 30px; border-top: 1px solid #ddd; padding-top: 20px;">
+                            <h2>Aprender fazendo</h2>
+                            <p>O IFGNU possibilita que seus integrantes coloquem em prática os conhecimentos adquiridos durante sua formação.</p>
+                            <p>Ao longo de sua trajetória, o grupo se tornou um importante caminho para que os alunos aprimorem seus conhecimentos e adquiram experiência prática.</p>
+                            <p>A participação no grupo também pode abrir portas para a execução de projetos, colocando os alunos em contato com desafios reais da área de tecnologia.</p>
+                            <blockquote style="margin-top: 15px; padding: 10px 15px; border-left: 4px solid #2e7d32; background: #e8f5e9; font-style: italic;">
+                                "Conhecimento ganha outra dimensão quando colocado em prática."
+                            </blockquote>
+                        </div>
+                    </div>
+
+                    <!-- O que você pode fazer no IFGNU -->
+                    <div class="coluna-fazendo" style="background: transparent; border: none; padding: 0;">
+                        <h2>O que você pode fazer no IFGNU?</h2>
+                        <p style="margin-bottom: 20px;">No IFGNU, você pode colocar seus conhecimentos em prática, desenvolver novas habilidades e participar de diferentes atividades relacionadas à tecnologia.</p>
+                        
+                        <div style="display: flex; flex-direction: column; gap: 15px;">
+                            <div>
+                                <h3 style="color: #2e7d32; font-size: 18px; margin-bottom: 5px;">💻 Desenvolvimento Web</h3>
+                                <p style="margin: 0;">Desenvolva sistemas e aplicações web, colocando em prática seus conhecimentos de programação.</p>
+                            </div>
+                            <div>
+                                <h3 style="color: #2e7d32; font-size: 18px; margin-bottom: 5px;">🌐 Redes e Servidores</h3>
+                                <p style="margin: 0;">Atue com redes e servidores e amplie seus conhecimentos em infraestrutura.</p>
+                            </div>
+                            <div>
+                                <h3 style="color: #2e7d32; font-size: 18px; margin-bottom: 5px;">🔬 Pesquisa</h3>
+                                <p style="margin: 0;">Desenvolva pesquisas e participe de atividades voltadas à produção de conhecimento científico.</p>
+                            </div>
+                            <div>
+                                <h3 style="color: #2e7d32; font-size: 18px; margin-bottom: 5px;">🎓 Minicursos</h3>
+                                <p style="margin: 0;">Participe e desenvolva minicursos em diferentes áreas da tecnologia.</p>
+                            </div>
+                            <div>
+                                <h3 style="color: #2e7d32; font-size: 18px; margin-bottom: 5px;">🖥️ Montagem e Manutenção</h3>
+                                <p style="margin: 0;">Aprenda e atue com montagem e manutenção de computadores.</p>
+                            </div>
+                            <div>
+                                <h3 style="color: #2e7d32; font-size: 18px; margin-bottom: 5px;">＋ E muito mais</h3>
+                                <p style="margin: 0;">Explore outras possibilidades e descubra novas formas de aprender e contribuir.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        const imagens = [
+            "imagens/carrossel/ifgu.png",
+            "imagens/carrossel/pc.jpg",
+            "imagens/carrossel/cod.webp"
+        ];
+
+        let indice = 0;
+        const imagem = document.getElementById("imagemCarrossel");
+        const bolinhas = document.querySelectorAll(".bolinha");
+
+        function atualizar(){
+            imagem.src = imagens[indice];
+            bolinhas.forEach(b => b.classList.remove("ativa"));
+            if(bolinhas[indice]) {
+                bolinhas[indice].classList.add("ativa");
+            }
+        }
+
+        function proxima(){
+            indice++;
+            if(indice >= imagens.length){
+                indice = 0;
+            }
+            atualizar();
+        }
+
+        function anterior(){
+            indice--;
+            if(indice < 0){
+                indice = imagens.length - 1;
+            }
+            atualizar();
+        }
+
+        function irPara(posicao){
+            indice = posicao;
+            atualizar();
+        }
+    </script>
+
+</body>
+</html>
